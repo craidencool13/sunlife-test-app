@@ -1,19 +1,13 @@
-// MODELS
 
 //PROVIDERS
 import {DeviceProvider} from '../providers/device/device';
 import {DataProvider} from '../providers/data/data';
-
-//PIPES
 
 //COMPONENTS
 import {ExpandedHeaderComponent} from '../components/expanded-header/expanded-header';
 import {ManageFundsComponent} from '../components/manage-funds/manage-funds';
 import {PolicyServicingComponent} from '../components/policy-servicing/policy-servicing';
 
-//PLUGINS
-
-//NATIVE
 
 export const NATIVE = [
 

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { IonicPage } from "ionic-angular";
 import { DataProvider } from "../../providers/data/data";
 
 @IonicPage()
@@ -12,16 +12,10 @@ export class DashboardPage {
   activeMenu = "manage"; // manage | claims | servicing
   user = {};
   constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
     public dataProvider: DataProvider
   ) {
     this.getUser();
     this.getAssets();
-  }
-
-  ionViewDidLoad() {
-    console.log("ionViewDidLoad DashboardPage");
   }
 
   getUser() {
@@ -29,7 +23,6 @@ export class DashboardPage {
       .getData("", "USER_DATA")
       .then((res) => {
         this.user = res;
-        console.log("user", res);
       })
       .catch((err) => {
         console.log("Error", err);
@@ -40,7 +33,6 @@ export class DashboardPage {
     this.dataProvider
       .getData("", "ASSETS")
       .then((res) => {
-        console.log("assets", res);
         this.assets = res;
       })
       .catch((err) => {
@@ -49,7 +41,6 @@ export class DashboardPage {
   }
 
   setActiveMenu(_event) {
-    console.log("_event", _event);
     this.activeMenu = _event.value;
   }
 }
