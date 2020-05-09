@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { IonicPage } from "ionic-angular";
 import {DataProvider} from '../../providers/data/data'
 
 @IonicPage()
@@ -10,7 +10,7 @@ import {DataProvider} from '../../providers/data/data'
 export class PolicyServingDetailsPage {
   policies: any = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public dataProvider: DataProvider) {
+  constructor(public dataProvider: DataProvider) {
     this.getPolicies();
   }
 
