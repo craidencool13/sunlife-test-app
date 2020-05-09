@@ -27,16 +27,29 @@ ionic serve
 ```
 
 
-### Running the app in an android device
+### Running in an android device
 
 ```
 ionic cordova platform add android
 ionic cordova run android
 ```
 
-### Running the app in an ios device
+### Running in an ios device
 
 ```
 ionic cordova platform add ios
 ionic cordova run ios
+```
+
+### e2e Testing
+
+```
+ionic serve
+npm run e2e
+```
+
+### Testing
+
+```
+npm run test
 ```
