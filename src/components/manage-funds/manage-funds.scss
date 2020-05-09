@@ -1,0 +1,45 @@
+manage-funds {
+  color: color($colors, dark);
+  font-family: "Roboto";
+
+  .coverage {
+    margin-top: 16px;
+    font-family: "Merriweather" !important;
+    .icon {
+      margin: 5px 10px;
+    }
+  }
+
+  .grid {
+    padding: 0px 16px;
+    .row,
+    .col {
+      ion-icon {
+        font-size: 3em;
+      }
+      img {
+        height: 5em;
+        width: 5em;
+      }
+    }
+  }
+
+  .card {
+    color: color($colors, dark);
+    margin: 0 !important;
+    border-radius: 2em 2em 0px 0px;
+    width: 100%;
+    -webkit-box-shadow: 0px 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0 10px rgba(0, 0, 0, 0.3);
+    .card-header {
+      border-bottom: 1px solid color($colors, col_light_grey);
+    }
+    .card-content {
+      padding-top: 16px !important;
+    }
+    span{
+      font-weight: bold;
+      color: color($colors, dark);
+    }
+  }
+}

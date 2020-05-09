@@ -1,0 +1,96 @@
+expanded-header {
+  .expanded-header {
+    // position: relative;
+    background: url("../assets/imgs/header_bg.jpg") rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    color: color($colors, col_white);
+    text-align: center;
+    padding-bottom: 4vh;
+
+    .header-ios .toolbar-background-ios {
+      border: unset;
+    }
+
+    .toolbar-background-ios {
+      background: transparent !important;
+    }
+
+    .toolbar {
+      .icon {
+        font-size: 2em;
+      }
+    }
+
+    .notification{
+      position: relative;
+      .count{
+        position: absolute;
+        top: 4px;
+        right: 0px;
+        background-color: color($colors, col_red);
+        color: color($colors, col_white);
+        padding: 3px 5px;
+        border-radius: 50%;
+        font-size: 0.5em;
+      }
+    }
+
+    .user-info {
+      @extend .fadeInUp;
+      margin-top: -20px;
+      .greetings {
+        font-family: "DancingScript";
+      }
+
+      .user-pic {
+        height: 20vw;
+        width: 20vw;
+        border: 2px solid white;
+        border-radius: 50%;
+        @include centerObject();
+      }
+    }
+  }
+
+  .user-menu {
+    text-align: center;
+    margin-top: -4.5vh;
+    padding: 3vh 0px;
+    background: url("../assets/imgs/menu_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    img {
+      height: 3vh;
+      width: 3vh;
+      border-radius: 50%;
+    }
+    p {
+      margin: 0px;
+      font-size: 1.15em;
+    }
+    #manage {
+      margin-top: 1.5vh;
+    }
+    #claims {
+      margin-top: 3.5vh;
+    }
+    #servicing {
+      margin-top: 1.5vh;
+    }
+    .col:nth-child(even) {
+      border-right: 1px solid color($colors, col_light_grey);
+      border-left: 1px solid color($colors, col_light_grey);
+    }
+
+    .active {
+      color: color($colors, col_dark_grey);
+    }
+
+    .inactive {
+      color: color($colors, col_light_grey);
+    }
+  }
+}

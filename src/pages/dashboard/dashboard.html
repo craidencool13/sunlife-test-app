@@ -1,0 +1,19 @@
+<ion-content>
+  <expanded-header
+    [user]="user"
+    [activeMenu]="activeMenu"
+    (menuClicked)="setActiveMenu($event)"
+  ></expanded-header>
+
+  <!-- MANAGE ILAS FUNDS  -->
+  <ng-template [ngIf]="activeMenu == 'manage' || activeMenu == 'claims'">
+    <manage-funds [assets]="assets"></manage-funds>
+  </ng-template>
+
+  <!-- CLAIMS -->
+
+  <!-- POLICY SERVICING -->
+  <ng-template [ngIf]="activeMenu == 'servicing'">
+    <policy-servicing></policy-servicing>
+  </ng-template>
+</ion-content>

@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>All Policies</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ng-template [ngIf]="policies.length == 0">
+    <h3 text-center>No policy was found.</h3>
+  </ng-template>
+
+  <ng-template [ngIf]="policies.length > 0">
+    <ion-list>
+      <ion-card
+        *ngFor="let policy of policies"
+        [ngClass]="policy.is_payment_due ? 'payment-due' : ''"
+      >
+        <ion-card-header>
+          {{policy.policy_name}}
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-row class="policy-row">
+            <ion-col>
+              Policy No: {{policy.policy_number}} <br />
+              Status: {{policy.policy_status}}
+            </ion-col>
+            <ion-col text-right>
+              <ion-icon name="chevron-back"></ion-icon>
+            </ion-col>
+          </ion-row>
+
+          <ion-row class="desc-row" *ngFor="let item of policy.items">
+            <ion-col>
+              {{item.label}}
+            </ion-col>
+            <ion-col text-right>
+              HKD {{item.value}}
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+        <ion-row class="row-payment-due" *ngIf="policy.is_payment_due">
+          <ion-col class="alert-icon" text-center>
+            <ion-icon name="alert-outline"></ion-icon>
+          </ion-col>
+          <ion-col class="alert-message" text-center>
+            Premium of HKD {{policy.amount_due}} due in
+            {{policy.days_before_due}} days.
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-list>
+    <div class="disclamer" text-center>
+      *excluding pending fund transactions
+    </div>
+  </ng-template>
+</ion-content>

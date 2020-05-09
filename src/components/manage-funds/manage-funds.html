@@ -1,0 +1,46 @@
+<div text-center>
+  <h3 class="coverage" (tap)="goToPolicies()">
+    Coverage from 4 policies
+    <ion-icon name="ios-arrow-forward"></ion-icon>
+  </h3>
+  <ng-template [ngIf]="coverage">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6 *ngFor="let cover of coverage">
+          <img [src]="cover.icon" />
+          <h4>{{cover.title}}</h4>
+          <p>{{cover.desc}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-template>
+  <div class="disclamer">
+    *Additional coverages detailed in provision
+  </div>
+  <ng-template [ngIf]="assets">
+    <ion-card>
+      <ion-card-header>
+        <ion-row>
+          <ion-col text-left>
+            <h2>Assets</h2>
+          </ion-col>
+          <ion-col text-right>
+            <p>Total <span>HKD {{assets.total_assets}}</span></p>
+          </ion-col>
+        </ion-row>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-row *ngFor="let asset of assets.items">
+            <ion-col text-left>
+              <p>{{asset.title}}</p>
+            </ion-col>
+            <ion-col text-right>
+              <span>HKG {{asset.amount}}</span>
+            </ion-col>
+          </ion-row>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
+</div>

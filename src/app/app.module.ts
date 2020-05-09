@@ -3,32 +3,47 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+
+import { HttpModule } from '@angular/http'; 
+import { HttpClientModule } from '@angular/common/http';
+
+import { SharedModule } from './shared.module';
+import { PROVIDER, PLUGINS, NATIVE } from '../app/imports'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
+var config = {
+  backButtonText: '',
+  iconMode: 'ios',
+  mode:'ios',
+  modalEnter: 'modal-slide-in',
+  modalLeave: 'modal-slide-out',
+  pageTransition: 'ios',
+};
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    ListPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, config),
+    HttpModule,
+    HttpClientModule,
+    PLUGINS,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ListPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    PROVIDER,
+    NATIVE,
   ]
 })
 export class AppModule {}

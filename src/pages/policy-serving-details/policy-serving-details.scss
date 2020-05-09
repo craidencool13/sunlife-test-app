@@ -1,0 +1,61 @@
+page-policy-serving-details {
+  .content {
+    background-color: color($colors, col_bg_grey);
+  }
+  .toolbar-background,
+  .toolbar-background-ios {
+    background-color: color($colors, col_dark_yellow);
+  }
+
+  .row {
+    .col {
+      padding: 5px 0px;
+    }
+  }
+
+  .payment-due {
+    border: 1px solid color($colors, col_dark_yellow);
+  }
+
+  .card {
+    @extend .fadeInLeft;
+    border-radius: 10px;
+    .card-header-ios {
+      padding: 10px 16px 0px 16px;
+      color: color($colors, col_light_blue);
+      font-size: 1.5em;
+      font-family: "RobotoBold";
+    }
+
+    .card-content {
+      padding: 0px 13px 5px 14px;
+    }
+
+    .policy-row {
+      color: color($colors, dark);
+    }
+
+    .desc-row {
+      color: color($colors, col_light_grey);
+      .col{
+        margin: auto;
+      }
+    }
+
+    .row-payment-due {
+        border-top: 1px solid color($colors, col_dark_yellow);
+        .alert-icon {
+          max-width: 10%;
+          font-size: 1.3em;
+          background-color: color($colors, col_dark_yellow);
+          color: color($colors, col_white);
+        }
+        
+        .alert-message {
+          color: color($colors, col_dark_yellow);
+          font-size: 1.1em;
+          margin: auto;
+        }
+      }
+  }
+}

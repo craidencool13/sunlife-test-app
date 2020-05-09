@@ -1,0 +1,46 @@
+policy-servicing {
+  .servicing {
+    border-bottom: 1px solid color($colors, col_light_grey);
+    margin: 20px;
+    padding-bottom: 20px;
+    font-family: "Roboto";
+
+    .icon-container {
+      max-width: 20%;
+    }
+
+    .header {
+      .col {
+        font-size: 1em;
+        color: color($colors, col_light_grey);
+        margin: auto;
+        img {
+          height: 3em;
+          width: 3em;
+        }
+      }
+    }
+
+    .body {
+      padding: 8px 10px;
+      .col {
+        font-size: 1.1em;
+        font-family: "RobotoBold";
+        color: color($colors, dark);
+        margin: auto;
+      }
+    }
+  }
+
+  .servicing:last-child {
+    border-bottom: unset;
+  }
+
+  .button {
+    width: 100%;
+    .icon {
+      color: color($colors, dark);
+      font-size: 2.5em;
+    }
+  }
+}

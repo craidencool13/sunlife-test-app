@@ -1,0 +1,91 @@
+@import "../assets/animate/animate.scss";
+
+.animateApp{
+    .pulse{
+        @include pulse(
+            $duration:1.5s,
+            $count: infinite,
+            $delay: 0s,
+            $function: ease, 
+            $fill: both
+            ); 
+        } 
+    .bounceInRight{
+        @include bounceInRight(
+            $duration:1.5s,
+            $count: 1,
+            $delay: .2s,
+            $function: ease, 
+            $fill: both
+            ); 
+        } 
+
+    .flipInX{
+        @include flipInX(
+            $duration:1.5s,
+            $count: 1,
+            $delay: .2s,
+            $function: ease, 
+            $fill: both
+            );
+        }
+
+    
+    .rotateInDownLeft{
+        @include rotateInDownLeft(
+            $duration:1.5s,
+            $count: 1,
+            $delay: .2s,
+            $function: ease, 
+            $fill: both
+            ); 
+        }
+    .fadeIn{
+        @include fadeIn(
+            $duration:1.5s,
+            $count: 1,
+            $delay: 0s,
+            $function: ease, 
+            $fill: both
+            ); 
+        }
+ 
+    .fadeInUp{
+        @include fadeInUp(
+            $duration:1.5s,
+            $count: 1,
+            $delay: .25s,
+            $function: ease, 
+            $fill: both
+            ); 
+        }
+    .fadeInDown{
+            @include fadeInDown(
+            $duration:1.5s,
+            $count: 1,
+            $delay: .25s,
+            $function: ease, 
+            $fill: both
+            ); 
+        }
+    .fadeInRight{
+        @include fadeInRight(
+        $duration:1.5s,
+        $count: 1,
+        $delay: .5s,
+        $function: ease, 
+        $fill: both
+        ); 
+    }
+    
+    .fadeInLeft{
+        @include fadeInLeft(
+        $duration:1.5s,
+        $count: 1,
+        $delay: .5s,
+        $function: ease, 
+        $fill: both
+        ); 
+    } 
+}
+

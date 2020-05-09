@@ -1,0 +1,45 @@
+<div class="expanded-header">
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button >
+        <ion-icon name="menu" color="col_white"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button class="notification">
+        <ng-template [ngIf]="user.notification_count">
+          <div class="count">
+            {{user.notification_count}}
+          </div>
+        </ng-template>
+        <ion-icon name="notifications-outline" color="col_white"></ion-icon>
+      </button>
+    </ion-buttons> </ion-navbar
+  >
+
+  <div class="user-info">
+    <img class="user-pic" [src]="user.display_image" alt="USER IMG" />
+    <h4 class="greetings">{{getGreetings()}}</h4>
+    <h2>{{user.last_name}}, {{user.first_name}}</h2>
+  </div>
+</div>
+<ion-row class="user-menu">
+  <ion-col id="manage" [ngClass]="activeMenu == 'manage' ? 'active' : 'inactive'" (tap)="selectMenu('manage')">
+    <img src="assets/icon/manage.png" />
+    <p>
+      Manage <br />
+      ILAS Funds
+    </p>
+  </ion-col>
+  <ion-col id="claims"  [ngClass]="activeMenu == 'claims' ? 'active' : 'inactive'" (tap)="selectMenu('claims')">
+    <img src="assets/icon/claims.png" />
+    <p>Claims</p>
+  </ion-col>
+  <ion-col id="servicing"  [ngClass]="activeMenu == 'servicing' ? 'active' : 'inactive'" (tap)="selectMenu('servicing')">
+    <img src="assets/icon/servicing.png" />
+    <p>
+      Policy <br />
+      Servicing
+    </p>
+  </ion-col>
+</ion-row>

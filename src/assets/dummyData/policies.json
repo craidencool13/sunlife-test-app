@@ -1,0 +1,94 @@
+[
+  {
+    "policy_name": "LifeSuper 20",
+    "policy_number": "601007042",
+    "policy_status": "Inforce",
+    "is_payment_due": true,
+    "amount_due": "1280.90",
+    "days_before_due": "3",
+    "items": [
+      {
+        "label": "Sum Assured",
+        "value": "5,900,000"
+      },
+      {
+        "label": "Surrender Value*",
+        "value": "240,770"
+      },
+      {
+        "label": "Modal Premium/ Regular Contribution including Levy",
+        "value": "3,441.0"
+      }
+    ]
+  },
+  {
+    "policy_name": "Sun Architect",
+    "policy_number": "20149180",
+    "policy_status": "Inforce",
+    "is_payment_due": false,
+    "amount_due": "0",
+    "days_before_due": "0",
+    "items": [
+      {
+        "label": "Contribution Amount",
+        "value": "11,066"
+      },
+      {
+        "label": "Fund Balance*",
+        "value": "10,539"
+      },
+      {
+        "label": "Surrender Value",
+        "value": "7,337"
+      },
+      {
+        "label": "Modal Premium/ Regular Contribution including Levy",
+        "value": "3,441.0"
+      }
+    ]
+  },
+  {
+    "policy_name": "Critical Medical Care Plan II",
+    "policy_number": "048267442",
+    "policy_status": "Inforce",
+    "is_payment_due": false,
+    "amount_due": "0",
+    "days_before_due": "0",
+    "items": [
+      {
+        "label": "Amount of Benefit",
+        "value": "500,000"
+      },
+      {
+        "label": "Modal Premium/ Regular Contribution including Levy",
+        "value": "3,441.00"
+      }
+    ]
+  },
+  {
+    "policy_name": "SunEducator 5",
+    "policy_number": "60158495",
+    "policy_status": "Inforce",
+    "is_payment_due": false,
+    "amount_due": "0",
+    "days_before_due": "0",
+    "items": [
+      {
+        "label": "Amount of Benefit",
+        "value": "25,000"
+      },
+      {
+        "label": "Cash Value*",
+        "value": "2,046"
+      },
+      {
+        "label": "Surrender Value",
+        "value": "2,251"
+      },
+      {
+        "label": "Modal Premium/ Regular Contribution including Levy",
+        "value": "3,441.00"
+      }
+    ]
+  }
+]
